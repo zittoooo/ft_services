@@ -27,16 +27,16 @@ echo "apply yaml"
 kubectl apply -f phpmyadmin.yaml
 
 #wordpress
-# cd ../wordpress
-# echo "wordpress image build"
-# docker build -t wordpress:latest . > /dev/null
-# kubectl apply -f wordpress.yaml
+cd ../wordpress
+echo "wordpress image build"
+docker build -t wordpress:latest . # > /dev/null
+kubectl apply -f wordpress.yaml
 
 # ftps
-# cd ../ftps
-# echo "ftpss image build"
-# docker build -t ftps:latest . > /dev/null
-# kubectl apply -f ftps.yaml
+cd ../ftps
+echo "ftpss image build"
+docker build -t ftps:latest . # > /dev/null
+kubectl apply -f ftps.yaml
 
 # influxdb
 # cd ../influxdb

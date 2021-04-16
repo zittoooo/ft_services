@@ -7,4 +7,4 @@ echo "<?php phpinfo(); ?>" >> /var/www/html/index.php
 mkdir -p /etc/nginx/sites-available/
 mkdir -p /etc/nginx/sites-enabled/
 
-# mysql -hmysql -Dwordpress -uuser -ppass < /run/nginx/wordpress.sql
+mysql -hmysql -Dwordpress -uuser -ppass < /run/nginx/wordpress.sql

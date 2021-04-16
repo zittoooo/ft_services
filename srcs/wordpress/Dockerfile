@@ -21,9 +21,7 @@ COPY wordpress.sh /usr/sbin/wordpress.sh
 RUN chmod +x /usr/sbin/wordpress.sh && \
     mkdir -p /run/nginx
 
-# COPY wordpress.sql /run/nginx/wordpress.sql
+COPY wordpress.sql /run/nginx/wordpress.sql
 
 CMD /bin/sh "/usr/sbin/wordpress.sh" && php-fpm7 \
      && nginx -g "daemon off;"
-# CMD /bin/sh "/usr/sbin/wordpress.sh" && php-fpm7 \
-#     && nginx -g "daemon off;"
