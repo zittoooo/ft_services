@@ -29,7 +29,7 @@ kubectl apply -f phpmyadmin.yaml
 #wordpress
 cd ../wordpress
 echo "wordpress image build"
-docker build -t wordpress:latest . # > /dev/null
+docker build -t wordpress:latest .  > /dev/null
 kubectl apply -f wordpress.yaml
 
 # ftps
@@ -38,19 +38,19 @@ echo "ftpss image build"
 docker build -t ftps:latest . # > /dev/null
 kubectl apply -f ftps.yaml
 
-# influxdb
+# # influxdb
 # cd ../influxdb
 # echo "influxdb image build"
 # docker build -t influxdb:latest . > /dev/null
 # kubectl apply -f influxdb.yaml
 
-# telegraf
+# # telegraf
 # cd ../telegraf
 # echo "telegraf image build"
 # docker build -t telegraf:latest . > /dev/null
 # kubectl apply -f telegraf.yaml
 
-# grafana
+# # grafana
 # cd ../grafana
 # echo "grafana image build"
 # docker build -t grafana:latest . > /dev/null
