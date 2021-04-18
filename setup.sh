@@ -35,7 +35,7 @@ kubectl apply -f wordpress.yaml
 # ftps
 cd ../ftps
 echo "ftpss image build"
-docker build -t ftps:latest . # > /dev/null
+docker build -t ftps:latest .  > /dev/null
 kubectl apply -f ftps.yaml
 
 # influxdb
