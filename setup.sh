@@ -38,20 +38,20 @@ echo "ftpss image build"
 docker build -t ftps:latest . # > /dev/null
 kubectl apply -f ftps.yaml
 
-# # influxdb
-# cd ../influxdb
-# echo "influxdb image build"
-# docker build -t influxdb:latest . > /dev/null
-# kubectl apply -f influxdb.yaml
+# influxdb
+cd ../influxdb
+echo "influxdb image build"
+docker build -t influxdb:latest . > /dev/null
+kubectl apply -f influxdb.yaml
 
-# # telegraf
-# cd ../telegraf
-# echo "telegraf image build"
-# docker build -t telegraf:latest . > /dev/null
-# kubectl apply -f telegraf.yaml
+# telegraf
+cd ../telegraf
+echo "telegraf image build"
+docker build -t telegraf:latest . > /dev/null
+kubectl apply -f telegraf.yaml
 
-# # grafana
-# cd ../grafana
-# echo "grafana image build"
-# docker build -t grafana:latest . > /dev/null
-# kubectl apply -f grafana.yaml
+# grafana
+cd ../grafana
+echo "grafana image build"
+docker build -t grafana:latest . > /dev/null
+kubectl apply -f grafana.yaml
