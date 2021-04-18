@@ -23,6 +23,8 @@ COPY config.inc.php /var/www/phpmyadmin/config.inc.php
 RUN chmod 705 /var/www/phpmyadmin/config.inc.php
 RUN mkdir -p /run/nginx
 
+COPY healthcheck.sh /
+
 EXPOSE 5000
 
 CMD php-fpm7 \
