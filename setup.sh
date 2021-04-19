@@ -1,3 +1,4 @@
+export MINIKUBE_HOME=$1
 minikube start --driver=virtualbox
 eval $(minikube -p minikube docker-env)
 
