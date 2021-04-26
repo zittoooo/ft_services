@@ -13,11 +13,6 @@ RUN rm -f /phpMyAdmin-4.9.5-all-languages.tar.gz
 RUN mv /phpMyAdmin-4.9.5-all-languages /var/www/phpmyadmin
 RUN rm -rf /var/cache/apk/*
 
-## phpmyadmin ssl을 위한 코드
-# RUN mkdir -p /etc/nginx/ssl
-# RUN openssl req -new -x509 -nodes -newkey rsa:4096 -keyout /etc/nginx/pma.key -out /etc/nginx/pma.crt -days 365 -subj "/C=KR/ST=Seoul/L=Seoul/O=42Seoul/CN=localhost"
-##
-
 COPY default.conf /etc/nginx/conf.d/
 COPY config.inc.php /var/www/phpmyadmin/config.inc.php
 RUN chmod 705 /var/www/phpmyadmin/config.inc.php
