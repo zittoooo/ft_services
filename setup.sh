@@ -56,3 +56,5 @@ cd ../grafana
 echo "grafana image build"
 docker build -t grafana:latest . > /dev/null
 kubectl apply -f grafana.yaml
+
+minikube dashboard
